@@ -1,28 +1,32 @@
-import { useState } from 'react'
+import React from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Features from './components/Features';
+import CTA from './components/CTA';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
-    </div>
-  )
-}
+    <div className="min-h-screen bg-slate-950 text-white">
+      {/* Decorative background gradients */}
+      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.12),transparent_60%)]" />
+      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(236,72,153,0.08),transparent_60%)]" />
 
-export default App
+      <Navbar />
+      <main>
+        <Hero />
+        <Features />
+        <CTA />
+      </main>
+      <footer className="py-10 border-t border-white/10 mt-8">
+        <div className="mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/60 text-sm">
+          <p>© {new Date().getFullYear()} Stampa, Inc. All rights reserved.</p>
+          <div className="flex items-center gap-6">
+            <a href="#" className="hover:text-white">Privacy</a>
+            <a href="#" className="hover:text-white">Security</a>
+            <a href="#" className="hover:text-white">Status</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
