@@ -83,7 +83,7 @@ export default function Hero() {
             transition={{ duration: 1.8, repeat: Infinity, repeatDelay: 3 }}
             className="pointer-events-none absolute top-1/3 left-6 right-6 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent"
           />
-          {/* waveform flash */
+          {/* waveform flash */}
           <motion.div
             aria-hidden
             initial={{ opacity: 0, scaleX: 0.8 }}
