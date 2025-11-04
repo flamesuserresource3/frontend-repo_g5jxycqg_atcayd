@@ -1,7 +1,8 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Features from './components/Features';
+import Problem from './components/Problem';
+import Scenarios from './components/Scenarios';
 import CTA from './components/CTA';
 
 export default function App() {
@@ -14,7 +15,8 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <Features />
+        <Problem />
+        <Scenarios />
         <CTA />
       </main>
       <footer className="py-10 border-t border-white/10 mt-8">
